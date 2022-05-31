@@ -1,5 +1,4 @@
-from carregamento import Carregamento
-
+from biblioteca import Biblioteca as bb
 def calcV(x, p, v, C, vet):
   valor = 0
   peso = 0
@@ -21,8 +20,7 @@ def divEConq(x, p, v, a, C, vet):
     vr = calcV(x, p, v, C, vetr)
     return vetl if vl > vr else vetr
 
-arquivo = Carregamento()
-n, C, p, v = arquivo.sobeArquivo('arquivos/low_dimensional/f1_l-d_kp_10_269')
+n, C, p, v = bb.sobeArquivo('arquivosKnapSack/low_dimensional/f1_l-d_kp_10_269')
 m = [0 for _ in range(len(p))]
 
 vet = divEConq(m, p, v, 0, C, [])

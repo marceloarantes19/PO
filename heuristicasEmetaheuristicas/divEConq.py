@@ -1,4 +1,3 @@
-from biblioteca import Biblioteca as bb
 def calcV(x, p, v, C, vet):
   valor = 0
   peso = 0
@@ -20,7 +19,11 @@ def divEConq(x, p, v, a, C, vet):
     vr = calcV(x, p, v, C, vetr)
     return vetl if vl > vr else vetr
 
-n, C, p, v = bb.sobeArquivo('arquivosKnapSack/low_dimensional/f1_l-d_kp_10_269')
+#n, C, p, v = bb.sobeArquivo('arquivosKnapSack/low_dimensional/f10_l-d_kp_20_879')
+C = 12
+p  = [4, 6, 3, 2]
+v = [5, 7, 9, 6]
+
 m = [0 for _ in range(len(p))]
 
 vet = divEConq(m, p, v, 0, C, [])
